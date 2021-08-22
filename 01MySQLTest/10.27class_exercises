@@ -1,0 +1,126 @@
+#10.27class_exercises
+#1. 查询选修课号为'c123'的学生学号
+SELECT sno
+FROM SC
+WHERE cno = 'c123';
+#2. 查询选修课号为'c123'的学生学号和姓名
+SELECT s.sno, sn
+FROM S
+         INNER JOIN SC ON s.sno = sc.sno
+WHERE cno = 'c123';
+#3. 查询选修课名为'JAVA'的学生学号和姓名
+SELECT s.sno, sn
+FROM S
+         INNER JOIN SC ON s.sno = sc.sno
+         INNER JOIN C ON sc.cno = c.cno
+WHERE cn = 'JAVA';
+#4. 查询选修课号'c123'或选修课号'c125'的学生学号
+SELECT sno
+FROM SC
+WHERE cno = 'c123'
+UNION
+SELECT sno
+FROM SC
+WHERE cno = 'c125';
+#或
+SELECT sno
+FROM SC
+WHERE cno = 'c123'
+   OR cno = 'c125';
+#5. 查询选修课号'c123'，亦选修课号'c125'的学生学号
+SELECT sno
+FROM SC
+WHERE cno = 'c123'
+    INTERSECT
+SELECT sno
+FROM SC
+WHERE cno = 'c125';
+#或
+SELECT sc1.sno
+FROM SC AS sc1,
+     sc sc2
+WHERE sc1.sno = sc2.sno
+  AND sc1.cno = 'c123'
+  AND sc2.cno = 'c125';
+#6.查询没选修课号为'c123'的学生学号
+SELECT sno
+FROM S
+WHERE sno NOT IN
+      (SELECT sno
+       FROM Sc
+       WHERE cno = 'c123'
+      );
+#7.查询学习全部课程的学生姓名
+SELECT SN
+FROM S
+WHERE NOT EXISTS
+    (SELECT *
+     FROM C
+     WHERE NOT EXISTS
+         (SELECT *
+          FROM SC
+          WHERE S.SNO = SC.SNO
+            AND C.CNO = SC.CNO
+         )
+    );
+#8.查询所学课程包含'990137'所学课程的学生学号
+SELECT SN
+FROM S
+WHERE NOT EXISTS
+    (SELECT *
+     FROM SC sc1
+     WHERE sno = '990137'
+       AND NOT EXISTS
+         (SELECT *
+          FROM SC
+          WHERE S.SNO = SC.SNO
+            AND SC1.CNO = SC.CNO
+         )
+    );
+#9.找出所学课程至多为学号'990137'同学所学的课程的学生学号
+SELECT sno
+FROM (SELECT cno FROM sc WHERE sno = '990137') AS s2
+         INNER JOIN sc ON s2.cno = sc.cno
+WHERE sno NOT IN
+      (
+          SELECT sno
+          FROM (SELECT cno FROM sc WHERE cno NOT IN (SELECT cno FROM sc WHERE sno = '990137')) AS s2
+                   INNER JOIN sc ON s2.cno = sc.cno
+      );
+#或
+SELECT sno
+FROM (SELECT cno FROM sc WHERE sno = '990137') AS s2
+         INNER JOIN sc ON s2.cno = sc.cno
+    EXCEPT
+SELECT sno
+FROM (SELECT cno FROM sc Except (SELECT cno FROM sc WHERE sno='990137')) AS s2
+         INNER JOIN sc ON s2.cno = sc.cno;
+#10.找出所学课程恰好为学号'990137'同学所学的课程的学生学号
+SELECT sno
+FROM (SELECT cno FROM sc WHERE sno = '990137') AS s2
+         INNER JOIN sc ON s2.cno = sc.cno
+WHERE sno NOT IN
+      (
+          SELECT sno
+          FROM (SELECT cno FROM sc WHERE cno NOT IN (SELECT cno FROM sc WHERE sno = '990137')) AS s2
+                   INNER JOIN sc ON s2.cno = sc.cno
+      )
+    INTERSECT
+SELECT SNO
+FROM SC AS SC1
+WHERE NOT EXISTS
+    (SELECT *
+     FROM SC SC2
+     WHERE sno = '990137'
+       AND NOT EXISTS
+         (SELECT *
+          FROM SC
+          WHERE SC1.SNO = SC.SNO
+            AND SC2.CNO = SC.CNO
+         )
+    );
+
+
+
+
+

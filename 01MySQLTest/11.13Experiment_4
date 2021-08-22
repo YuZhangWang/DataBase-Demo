@@ -1,0 +1,607 @@
+#P175 6.5.1 a)
+USE it_products;
+INSERT INTO pc
+VALUES ('1100', '3.2', '1024', '180', '2499');
+INSERT product
+VALUES ('C', '1100', 'pc');
+#P175 6.5.1 b)
+USE it_products;
+INSERT INTO Product
+SELECT maker, model + 1100, 'laptop'
+FROM Product
+WHERE type = ' pc ';
+INSERT INTO Laptop
+SELECT model + 1100, speed, ram, hd, 17, price + 500
+FROM PC;
+#P175 6.5.1 c)
+USE it_products;
+DELETE
+FROM pc
+WHERE hd < 100;
+#P175 6.5.1 d)
+USE it_products;
+DELETE
+FROM Laptop L1
+WHERE L1.model IN (SELECT P1.model
+                   FROM Product P1
+                   WHERE P1.maker IN (SELECT DISTINCT P2.maker
+                                      FROM Product P2
+                                      WHERE P2.maker NOT IN (SELECT P3.maker
+                                                             FROM Product P3
+                                                             WHERE P3.type = 'printer'
+                                      )
+                   )
+);
+
+DELETE
+FROM Product P4
+WHERE P4.model IN (SELECT P5.model
+                   FROM Product P5
+                   WHERE P5.maker IN (SELECT DISTINCT P6.maker
+                                      FROM Product P6
+                                      WHERE P6.maker NOT IN (SELECT P7.maker
+                                                             FROM Product P7
+                                                             WHERE P7.type = 'printer'
+                                      )
+                   )
+)
+  AND P4.type = 'laptop';
+#P175 6.5.1 e)
+USE it_products;
+UPDATE Product
+SET maker='A'
+WHERE maker = 'B';
+#P175 6.5.1 f)
+USE it_products;
+UPDATE pc
+SET ram =ram * 2,
+    hd=hd + 60;
+#P175 6.5.1 g)
+USE it_products;
+UPDATE laptop L
+SET L.screen=L.screen + 1,
+    L.price =L.price - 100
+WHERE L.model IN
+      (SELECT P.model
+       FROM product P
+       WHERE P.maker = 'B'
+      );
+#P175 6.5.2 a)
+USE warships;
+INSERT INTO classes
+VALUES ('Nelson', 'bb', 'Gt.Britain', 9, 16, 34000);
+INSERT INTO ships
+VALUES ('Nelson', 'Nelson', 1927);
+INSERT INTO ships
+VALUES ('Rodney', 'Nelson', 1927);
+#P175 6.5.2 b)
+USE warships;
+INSERT INTO classes
+VALUES ('Vittorio Veneto', 'bb', 'Italy', 9, 15, 41000);
+INSERT INTO ships
+VALUES ('Vittorio Veneto', 'Vittorio Veneto', 1940);
+INSERT INTO ships
+VALUES ('Italia', 'Vittorio Veneto', 1940);
+INSERT INTO ships
+VALUES ('Roma', 'Vittorio Veneto', 1942);
+#P175 6.5.2 c)
+USE warships;
+DELETE
+FROM ships
+WHERE ships.name IN
+      (SELECT ship
+       FROM Outcomes
+       WHERE result = 'sunk'
+      );
+#P175 6.5.2 d)
+USE warships;
+UPDATE classes
+SET bore         = bore * 2.5,
+    displacement = displacement / 1.1;
+#P175 6.5.2 e)
+USE warships;
+DELETE
+FROM classes C1
+WHERE C1.class IN
+      (SELECT C2.class
+       FROM classes C2,
+            ships
+       WHERE C2.class = ships.class
+       GROUP BY C2.class
+       HAVING COUNT(C2.class) < 3
+      );
+#P191 7.2.1 a)
+USE movie;
+ALTER TABLE movies
+    ADD CONSTRAINT ck_year CHECK (year >= 1915);
+#P191 7.2.1 b)
+USE movie;
+ALTER TABLE movies
+    ADD CONSTRAINT ck_length CHECK (length >= 60 AND length <= 250);
+#P191 7.2.1 c)
+USE movie;
+ALTER TABLE movies
+    ADD CONSTRAINT ck_studioname
+        CHECK (studioname IN ('Disney', 'Fox', 'MGM', 'Paramount'));
+#P191 7.2.3 a)
+USE movie;
+CREATE TABLE starsin
+(
+    starName CHAR(30)
+        CHECK (starName IN (SELECT name
+                            FROM MovieStar
+                            WHERE YEAR(birthdate) > movieYear));
+#P191 7.2.3 b)
+USE movie;
+CREATE TABLE studio
+(
+    address CHAR(255) CHECK (address IS UNIQUE
+) );
+#P191 7.2.3 c)
+USE movie;
+CREATE TABLE moviestar
+(
+    name char(30) CHECK (name NOT IN (SELECT name
+                                      FROM movieexec))
+);
+#P191 7.2.3 d)
+USE movie;
+CREATE TABLE studio
+(
+    name char(30)
+        CHECK (name IN (SELECT studioName
+                        FROM movies))
+);
+#P191 7.2.3 e)
+USE movie;
+CREATE TABLE movies
+(
+    CHECK (producerC NOT IN (SELECT presC
+                             FROM studio) OR
+           studioname IN (SELECT studioname
+                          FROM studio
+                          WHERE presC = producerC))
+);
+#P191 7.2.5 a)
+USE warships;
+CHECK (class NOT IN (SELECT class FROM classes
+    WHERE bore > 16));
+#P191 7.2.5 b)
+USE warships;
+CHECK (class NOT IN (SELECT class FROM classes
+    WHERE numGuns > 9 AND bore > 14));
+#P191 7.2.5 c)
+USE warships;
+CHECK (ship IN (SELECT s.name FROM ships s, battles b, outcomes o
+    WHERE s.name = o.ship AND
+    b.name =o.battle AND
+    s.launched > YEAR (b.date)));
+#P193 7.3.1 a)
+USE movie;
+ALTER TABLE movies
+    ADD CONSTRAINT myKey
+        PRIMARY KEY (title, year);
+#P193 7.3.1 b)
+USE movie;
+ALTER TABLE movies
+    ADD CONSTRAINT producerCheck FOREIGN KEY (producerC) REFERENCES MovieExec (cert);
+#P193 7.3.1 c)
+USE movie;
+ALTER TABLE movies
+    ADD CONSTRAINT lengthCheck CHECK (length >= 60 AND length <= 250);
+#P193 7.3.1 d)
+USE movie;
+ALTER TABLE MovieStar
+    ADD CONSTRAINT noDupInExec CHECK (name NOT IN (SELECT name
+                                                   FROM MovieExec));
+ALTER TABLE MovieExec
+    ADD CONSTRAINT noDupInStar CHECK (name NOT IN (SELECT name
+                                                   FROM MovieStar));
+#P193 7.3.1 e)
+USE movie;
+ALTER TABLE Studio
+    ADD CONSTRAINT noDupAddr CHECK (address IS UNIQUE);
+#P193 7.3.2 a)
+USE warships;
+ALTER TABLE classes
+    ADD CONSTRAINT myKey PRIMARY KEY (class, country);
+#P193 7.3.2 b)
+USE warships;
+ALTER TABLE outcomes
+    ADD CONSTRAINT battleCheck FOREIGN KEY (battle) REFERENCES battles (name);
+#P193 7.3.2 c)
+USE warships;
+ALTER TABLE outcomes
+    ADD CONSTRAINT shipCheck FOREIGN KEY (ship) REFERENCES ships (name);
+#P193 7.3.2 d)
+USE warships;
+ALTER TABLE ships
+    ADD CONSTRAINT classGun CHECK CHECK (class NOT IN (SELECT class FROM classes WHERE numGuns > 14));
+#P193 7.3.2 e)
+USE warships;
+ALTER TABLE ships
+    ADD CONSTRAINT shipDateCheck CHECK (ships.name IN (SELECT s.name
+                                                       FROM ships S,
+                                                            battles B,
+                                                            outcomes O
+                                                       WHERE S.name = O.ship
+                                                         AND B.name = O.battle
+                                                         AND S.launched >= YEAR(b.date)));
+#P195 7.4.1 a)
+USE it_products;
+CREATE
+ASSERTION
+CHECK
+(NOT EXISTS (
+    (SELECT maker FROM Product NATURAL JOIN PC)
+    INTERSECT
+    (SELECT maker FROM Product NATURAL JOIN Laptop)));
+#P195 7.4.1 b)
+USE it_products;
+CREATE
+ASSERTION
+CHECK
+(NOT EXISTS
+    (SELECT maker FROM Product NATURAL JOIN PC
+    WHERE speed > ALL
+    (SELECT L2.speed FROM Product P2, Laptop L2
+    WHERE P2.maker = maker AND P2.model =L2.model)));
+#P195 7.4.1 c)
+USE it_products;
+CREATE
+ASSERTION
+CHECK
+(NOT EXISTS
+    (SELECT model FROM Laptop
+    WHERE price <= ALL
+    (SELECT price FROM PC
+    WHERE PC.ram < Laptop.ram)));
+#P195 7.4.1 d)
+USE it_products;
+CREATE
+ASSERTION
+CHECK
+(EXISTS (SELECT p2.model FROM Product p1, PC p2
+    WHERE p1.type =, pc? AND P1.model = p2.model)
+    UNION ALL
+    (SELECT I.model FROM Product p, Laptopl
+    WHERE p.type = , laptop? AND p.model = 1. model)
+    UNION ALL
+    (SELECT p2.model FROM Product p1, Printer p2
+    WHERE p1.type = printer? AND P1.model = p2.model));
+#P195 7.4.2 a)
+USE warships;
+CREATE
+ASSERTION
+CHECK
+(2 >= ALL
+    (SELECT COUNT () FROM Ships
+    GROUP BY class));
+#P195 7.4.2 b)
+USE warships;
+CREATE
+ASSERTION
+CHECK
+(NOT EXISTS
+    (SELECT country FROM Classes
+    WHERE type =,bb?)
+    INTERSECT (SELECT country FROM Classes
+    WHERE type =,bc?));
+#P195 7.4.2 c)
+USE warships;
+CREATE
+ASSERTION
+CHECK
+(NOT EXISTS SELECT o.battle FROM Outcomes o, Ships s, Classes c
+    WHERE o.ship = s.name AND s.class = c.class AND c.numGuns >9
+    INTERSECT (
+    SELECT o.battle FROM Outcomes o, Ships s, Classes c
+    WHERE o.result = , sunk? AND o.ship = s.name AND s.class = c.class AND c.numGuns <9));
+#P195 7.4.2 d)
+USE warships;
+CREATE
+ASSERTION
+CHECK
+(NOT EXISTS
+    (SELECT s1.name FROM Ships s1
+    WHERE s1.launched <
+    (SELECT s2.launched FROM Ships s2
+    WHERE s2.name = s1.class)));
+#P195 7.4.2 e)
+USE warships;
+CREATE
+ASSERTION
+CHECK
+(ALL (SELECT class FROM Classes c)
+    IN (SELECT class FROM Ships GROUP BY class)
+);
+#P199 7.5.2 a)
+USE it_products;
+CREATE TRIGGER LowPricePCTrigger
+    AFTER UPDATE OF price ON PC
+    REFERENCING
+    OLD ROW AS OldRow,
+    OLD TABLE AS OldStuff,
+    NEW ROW AS NewRow,
+    NEW TABLE AS NewStuff
+    FOR EACH ROW WHEN
+(NewRow.price < ALL
+    (SELECT PC.price FROM PC
+    WHERE PC.speed = NewRow.speed))
+BEGIN
+DELETE
+FROM PC
+WHERE (model, speed, ram, hd, price) IN NewStufft;
+INSERT INTO PC
+        (SELECT FROM OldStuff);
+END;
+#P199 7.5.2 b)
+USE it_products;
+CREATE TRIGGER NewPrinterTrigger
+    AFTER INSERT
+    ON Printer
+    REFERENCING NEW ROW AS NewRow,
+    NEW TABLE AS NewStuff
+    FOR EACH ROW WHEN
+(NOT EXISTS (SELECT * FROM Product
+    WHERE Product.model = NewRow.model))
+DELETE
+FROM Printer
+WHERE (model, color, type, price) IN NewStuff;
+#P199 7.5.2 c)
+USE it_products;
+CREATE TRIGGER AvgPriceTrigger
+    AFTER UPDATE OF price ON Laptop
+    REFERENCING
+    OLD TABLE AS OldStuff,
+    NEW TABLE AS NewStuff
+    FOR EACH STATEMENT WHEN
+(1500 >
+    (SELECT AVG(price) FROM Laptop))
+BEGIN
+DELETE
+FROM Laptop
+WHERE (model, speed, ram, hd, screen, price) IN NewStuff;
+INSERT INTO Laptop
+        (SELECT* FROM OldStuff)
+    END;
+#P199 7.5.2 d)
+USE it_products;
+CREATE TRIGGER HardDiskTrigger
+    AFTER UPDATE OF hd,ram ON PC
+    REFERENCING
+    OLD ROW AS OldRow,
+    OLD TABLE AS OldStuff,
+    NEW ROW AS NewRow,
+    NEW TABLE AS NewStuft
+    FOR EACH ROW WHEN
+    (NewRow.hd < NewRow.ram*100)
+BEGIN
+DELETE
+FROM PC
+WHERE (model, speed, ram, hd, price) IN NewStuff;
+INSERT INTO PC
+        (SELECT* FROM OldStuff);
+END;
+#P199 7.5.2 e)
+USE it_products;
+CREATE TRIGGER DupModelTrigger
+    BEFORE INSERT
+    ON PC,Laptop,Printer
+    REFERENCING
+    NEW ROW AS NewRow,
+    NEW TABLE AS NewStutf
+    FOR EACH ROW WHEN
+(EXISTS (SELECT * FROM NewStuff NATUAL JOIN PC)
+    UNION ALL
+    (SELECT * FROM NewStuff NATUAL JOIN Laptop)
+    UNION ALL
+    (SELECT * FROM NewStuff NATUAL JOIN Printer)
+    BEGIN
+    SIGNAL SQLSTATE,10001?
+    (, DUPLICATE Model INSERT Failed?);
+END;
+#P199 7.5.3 a)
+USE warships;
+CREATE TRIGGER NewClassTrigger
+    AFTER INSERT
+    ON classes
+    REFERENCING NEW ROW AS NewRow
+    FOR EACH ROW
+BEGIN
+INSERT INTO ships(NAME, class, lunched)
+VALUES (NewRow.class, NewRow.class, NULL);
+END;
+#P199 7.5.3 b)
+USE warships;
+CREATE TRIGGER ClassDisTrigger
+    BEFORE INSERT
+    ON classes
+    REFERENCING NEW ROW AS NewRow,
+    NEW TABLE AS NewStuff
+    FOR EACH ROW WHEN
+    (NewRow.displacement > 35000)
+UPDATE NewStuff
+SET displacement = 35000;
+#P199 7.5.3 c)
+USE warships;
+CREATE TRIGGER newOutcomesTrigger
+    AFTER INSERT
+    ON outcomes
+    REFERENCING NEW ROW AS NewRow
+    FOR EACH ROW WHEN
+(NewRow.ship NOT EXISTS
+    (SELECT NAME FROM ships))
+INSERT INTO ships(name, class, launched)
+VALUES (NewRow.ship, NULL, NULL);
+#P199 7.5.3 d)
+USE warships;
+CREATE TRIGGER changeShipTrigger
+    AFTER INSERT
+    ON Ships
+    REFERENCING NEW TABLE AS NewStuff
+    FOR EACH STATEMENT WHEN
+(20 < ALL SELECT COUNT (NAME)
+    FROM Ships NATURAL JOIN Classes GROUP BY country)
+)
+DELETE
+FROM ships
+WHERE (NAME, class, launched) IN NewStuff;
+#P199 7.5.3 e)
+USE warships;
+CREATE TRIGGER sunkShipTrigger
+    AFTER INSERT
+    ON Outcomes
+    REFERENCING NEW ROW AS NewRow
+    NEW TABLE AS NewStuff
+    FOR EACH ROW WHEN
+((SELECT DATE
+  FROM Batles
+  WHERE NAME = NewRow.battie) < ALL
+    (SELECT DATE FROM Battles
+    WHERE NAME IN (SELECT battle FROM Outcomes
+    WHERE ship = NewRow.ship AND result= "sunk")));
+DELETE
+FROM outcomes
+WHERE (ship, battle, result) IN NewStuff;
+#P199 7.5.4 a)
+USE movie;
+CREATE TRIGGER changeStarsInTrigger
+    AFTER INSERT
+    ON Starsln
+    REFERENCING NEW ROW AS NewRow,
+    FOR EACH ROW WHEN
+(NewRow.starName NOT EXISTS
+    (SELECT NAME FROM MovieStar))
+INSERT INTO MovieStar(name)
+VALUES (NewRow.starName);
+#P199 7.5.4 b)
+USE movie;
+CREATE TRIGGER changeMovieExecTrigger
+    AFTER INSERT
+    ON MovieExec
+    REFERENCING NEW ROW AS NewRow,
+    FOR EACH ROW WHEN
+(NewRow.cert NOT EXISTS
+    (SELECT presC FROM Studio)
+    UNION ALL
+    SELECT producerC FROM Movies);
+INSERT INTO movie.movies(producerC)
+VALUES (NewRow.cert);
+#P199 7.5.4 c)
+USE movie;
+CREATE TRIGGER changeMovieTrigger
+    AFTER DELETE
+    ON MovieStar
+    REFERENCING OLD TABLE AS OldStuff,
+    FOR EACH STATEMENT WHEN
+(1 > ALL
+    (SELECT COUNT (*) FROM StarIn s, MovieStar m
+    WHERE s.starName = m.name
+    GROUP BY s.movieTitle, m.gendar));
+INSERT INTO MovieStar(SELECT* FROM OldsStuff);
+#P199 7.5.4 d)
+USE movie;
+CREATE TRIGGER numMoviesTrigger
+    AFTER INSERT
+    ON Movies
+    REFERENCING NEW TABLE AS NewStuffi
+    FOR EACH STATEMENT WHEN
+(100 < ALL
+    (SELECT COUNT () FROM Movies
+    GROUP BY studioName, YEAR));
+DELETE
+FROM Movies
+WHERE (title, year, length, genre, StudioName, producerC)IN NewStuff;
+#P199 7.5.4 e)
+USE movie;
+CREATE TRIGGER avgMovieLenTrigger
+    AFTER INSERT
+    ON Movies
+    REFERENCING NEW TABLE AS NewStuff
+    FOR EACH STATEMENT WHEN
+(120 < ALL
+    (SELECT AVG(length) FROM Movies GROUP BY YEAR));
+DELETE
+FROM Movies
+WHERE (title, year, length, genre, StudioName, producerC)IN NewStuff;
+#P204 8.1.1 a)
+USE movie;
+CREATE VIEW RichExec AS
+SELECT *
+FROM MovieExec
+WHERE netWorth >= 10000000;
+#P204 8.1.1 b)
+USE movie;
+CREATE VIEW StudioPres(name, address, cert) AS
+SELECT MovieExec.name,
+       MovieExec.address,
+       MovieExec.cert
+FROM MovieExec.Studio
+WHERE MovieExec.cert = Studio.presC;
+#P204 8.1.1 c)
+USE movie;
+CREATE VIEW ExecutiveStar(name, address, gender, birthdate, cert, netWorth) AS
+SELECT star.name, star.address, star.genre, star.birthdate, exec.cert, exec.netWorth
+FROM MovieStar star,
+     MovieExec exec
+WHERE star.name = exec.name
+  AND star.address = exec.address;
+#P207 8.2.2 a)
+
+#P207 8.2.2 b)
+USE movie;
+CREATE TRIGGER DisneyComedylnsert
+    INSTEAD OF
+INSERT ON DisneyComedies
+    REFERENCING NEW ROW AS NewRow
+    FOR EACH ROW
+INSERT INTO Movies(title, year, length, studioName, genre)
+VALUES (NewRow.title, NewRow.year, NewYear.length, 'Disney', 'comedy');
+#P207 8.2.2 c)
+USE movie;
+CREATE TRIGGER DisneyComedyUpdate
+    INSTEAD OF
+UPDATE ON DisneyComedies
+    REFERENCING NEW ROW AS NewRow
+    FOR EACH ROW
+UPDATE Movies
+SET length NewRow.length
+WHERE title = NewRow.title
+  AND year = NEWROW.year
+  AND studionName = 'Disney'
+  AND genre = 'comedy';
+#P207 8.2.3 a)
+
+#P207 8.2.3 b)
+USE it_products;
+CREATE TRIGGER NewPCInsert
+    INSTEAD OF
+INSERT ON NewPO
+    REFERENCING NEW ROW AS NewRow
+    FOR EACH ROW
+(INSERT INTO Product
+ VALUES (NewRow.maker, NewRow.model, 'pg'))
+(INSERT INTO PC
+ VALUES (NewRow.model, NewRow.speed, NewRow.ram, NewRow.hd, NewRow.price));
+#P207 8.2.3 c)
+USE it_products;
+CREATE TRIGGER NewPCUpdate
+    INSTEAD OF
+UPDATE ON NewPC
+    REFERENCING NEW ROW AS NewRow
+    FOR EACH ROW
+UPDATE PC
+SET price = NewPC.price
+WHERE model = NewPC.model;
+#P207 8.2.3 d)
+USE it_products;
+CREATE TRIGGER NewPCDelete
+    INSTEAD OF
+DELETE ON NeePC
+    REFERENCING OLD ROW AS OldRow
+    FOR EACH ROW
+    (DELETE FROM Product
+    WHERE model = OldRow.model)
+    (DELETE FROM PC
+    WHERE model = OldRow.model);

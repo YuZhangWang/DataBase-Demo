@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fc795888-bc61-4c79-8db8-63e4c2909703" name="默认更改列表" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1ijVGER0U4HFkum12R0EhQ1KgbT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DBE.Init.BalloonShown" value="true" />
+    <property name="DatabaseDriversLRU" value="sqlserver" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fc795888-bc61-4c79-8db8-63e4c2909703" name="默认更改列表" comment="" />
+      <created>1606486135300</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606486135300</updated>
+      <workItem from="1606486140236" duration="4000" />
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602420956156">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1602420956156" />
+    <state width="1024" height="372" key="GridCell.Tab.0.bottom" timestamp="1606499937208">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="372" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606499937208" />
+    <state width="1024" height="372" key="GridCell.Tab.0.center" timestamp="1606499937208">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="372" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606499937208" />
+    <state width="1024" height="372" key="GridCell.Tab.0.left" timestamp="1606499937208">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="372" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606499937208" />
+    <state width="1024" height="372" key="GridCell.Tab.0.right" timestamp="1606499937208">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="372" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606499937208" />
+    <state width="242" height="553" key="HiddenNamespacesPopup" timestamp="1606487306609">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="242" height="553" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1606487306609" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1606483507020">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1606483507020" />
+  </component>
+</project>

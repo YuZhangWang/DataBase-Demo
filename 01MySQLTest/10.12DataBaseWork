@@ -1,0 +1,606 @@
+#P151，6.1.2
+#a)
+USE movie;
+SELECT address
+FROM studio
+WHERE name = 'MGM';
+#b)
+USE movie;
+SELECT birthdate
+FROM moviestar
+WHERE name = 'Sandra Bullock';
+#c)
+USE movie;
+SELECT starName
+FROM starsin
+WHERE movieYear = 1980
+   OR movieTitle LIKE 'Love'
+   OR movieTitle LIKE '%Love'
+   OR movieTitle LIKE 'Love%'
+   OR movieTitle LIKE '%Love%';
+#d)
+USE movie;
+SELECT name
+FROM movieexec
+WHERE netWorth >= 10000000;
+#e)
+USE movie;
+SELECT name
+FROM moviestar
+WHERE genre = 'M'
+   OR address LIKE '%Malibu%';
+
+#P151，6.1.3
+#a)
+USE it_products;
+SELECT model, speed, hd
+FROM PC
+WHERE price < 1000;
+#b)
+USE it_products;
+SELECT model, speed AS gigahertz, hd AS gigabytes
+FROM PC
+WHERE price < 1000;
+#c)
+USE it_products;
+SELECT maker
+FROM product
+WHERE type = 'printer';
+#d)
+USE it_products;
+SELECT model, ram, screen
+FROM Laptop
+WHERE price > 1500;
+#e)
+USE it_products;
+SELECT *
+FROM printer
+WHERE color = 1;
+#f)
+USE it_products;
+SELECT model, hd
+FROM pc
+WHERE speed = 3.2
+  AND price < 2000;
+
+#P151，6.1.4
+#a)
+USE warships;
+SELECT class, country
+FROM classes
+WHERE numGuns >= 10;
+#b)
+USE warships;
+SELECT name AS shipName
+FROM Ships
+WHERE launched < 1918;
+#c)
+USE warships;
+SELECT ship, battle
+FROM outcomes
+WHERE result = 'sunk';
+#d)
+USE warships;
+SELECT name
+FROM Ships
+WHERE name = class;
+#e)
+USE warships;
+SELECT ship name
+FROM outcomes
+WHERE ship LIKE 'R%'
+UNION
+SELECT name
+FROM ships
+WHERE name LIKE 'R%';
+#f)
+USE warships;
+SELECT ship name
+FROM outcomes
+WHERE ship LIKE '_% _% _%'
+UNION
+SELECT name
+FROM ships
+WHERE name LIKE '_% _% _%';
+
+#P157，6.2.1
+#a)
+USE movie;
+SELECT name
+FROM moviestar,
+     starsin
+WHERE name = starname
+  AND movieTitle = ' Titanic'
+  AND genre = 'M';
+#b)
+USE movie;
+SELECT starname
+FROM movies,
+     StarsIn,
+     studio
+WHERE name = 'MGM'
+  AND year = 1995
+  AND title = movieTitle
+  AND studioname = name;
+#c)
+USE movie;
+SELECT M.name
+FROM movieexec M,
+     studio S
+WHERE M.cert = S.pres
+  AND S.name = 'MGM';
+#d)
+USE movie;
+SELECT M.title
+FROM movies M,
+     movies M1
+WHERE M.length > M1.length
+  AND M1.title = 'Gone with the Wind';
+#e)
+USE movie;
+SELECT M.name
+FROM movieexec M,
+     movieexec M1
+WHERE M.netWorth > M1.netWorth
+  AND M1.name = 'Merv Griffin';
+
+#P157，6.2.2
+#a)
+USE it_products;
+SELECT P.maker, L.speed
+FROM product P,
+     laptop L
+WHERE L.hd >= 30
+  AND P.model = L.model;
+#b)
+USE it_products;
+SELECT P.model, P1.price
+FROM product P,
+     pc P1
+WHERE P.maker = 'B'
+  AND P.model = P1.model
+UNION
+SELECT P2.model, P3.price
+FROM product P2,
+     laptop P3
+WHERE P2.maker = 'B'
+  AND P2.model = P3.model
+UNION
+SELECT P4.model, P5.price
+FROM product P4,
+     printer P5
+WHERE P4.maker = 'B'
+  AND P4.model = P5.model;
+#c)
+USE it_products;
+SELECT DISTINCT P.maker
+FROM product P,
+     laptop L
+WHERE P.model = L.model
+  AND P.maker <> ALL (
+    SELECT DISTINCT P1.maker
+    FROM product P1,
+         pc P2
+    WHERE P1.model = P2.model);
+#d)
+USE it_products;
+SELECT DISTINCT P.hd
+FROM pc P,
+     pc P1
+WHERE P.hd = P1.hd
+  AND P.model > P1.model;
+#e)
+USE it_products;
+SELECT P.model, P1.model
+FROM pc P,
+     pc P1
+WHERE P.speed = P1.speed
+  AND P.ram = P1.ram
+  AND P.model < P1.model;
+#f)
+USE it_products;
+SELECT M.maker
+FROM (SELECT maker, P1.model
+      FROM pc P,
+           product P1
+      WHERE speed >= 3.0
+        AND P.model = P1.model
+      UNION
+      SELECT maker, P2.model
+      FROM laptop L,
+           product P2
+      WHERE speed >= 3.0
+        AND L.model = P2.model) AS M
+GROUP BY M.maker
+HAVING COUNT(M.model) >= 2;
+
+#P157，6.2.3
+#a)
+USE warships;
+SELECT S.name
+FROM ships S,
+     classes C
+WHERE S.class = C.class
+  AND C.displacement > 35000;
+#b)
+USE warships;
+SELECT S.name, C.displacement, C.numGuns
+FROM classes C,
+     outcomes O,
+     ships S
+WHERE S.name = O.ship
+  AND S.class = C.class
+  AND O.battle = 'Guadalcanal';
+#c)
+USE warships;
+SELECT name
+FROM ships
+UNION
+SELECT ship name
+FROM outcomes;
+#d)
+USE warships;
+SELECT C.country
+FROM classes C,
+     classes C1
+WHERE C.country = C1.country
+  AND C.type = 'bb'
+  AND C1.type = 'bc';
+#e)
+USE warships;
+SELECT O.ship
+FROM outcomes O,
+     battles B
+WHERE O.battle = B.name
+  AND O.result = 'damaged'
+  AND EXISTS(SELECT B1.date
+             FROM outcomes O1,
+                  battles B1
+             WHERE O1.battle = B1.name
+               AND O.ship = O1.ship
+               AND B.date < B1.date);
+#f)
+USE warships;
+SELECT O.battle
+FROM outcomes O,
+     ships S,
+     classes C
+WHERE O.ship = S.name
+  AND S.class = C.class
+GROUP BY C.country,
+         O.battle
+HAVING COUNT(O.ship) > 3;
+
+#P165，6.3.1
+#a)
+USE it_products;
+SELECT DISTINCT maker
+FROM product
+WHERE model IN (SELECT model
+                FROM pc
+                WHERE speed >= 3.0);
+SELECT DISTINCT P.maker
+FROM product P
+WHERE exists(SELECT P1.model
+             FROM pc P1
+             WHERE P1.speed >= 3.0
+               AND P1.model = P.model);
+#b)
+USE it_products;
+SELECT P.model
+FROM printer P
+WHERE P.price >= ALL (SELECT P1.price
+                      FROM printer P1);
+SELECT P.model
+FROM printer p
+WHERE P.price IN (SELECT MAX(P1.price)
+                  FROM printer P1);
+#c)
+USE it_products;
+SELECT L.model
+FROM laptop L
+WHERE L.speed < ANY (SELECT P.speed
+                     FROM pc P);
+SELECT L.model
+FROM laptop L
+WHERE exists(SELECT P.speed
+             FROM pc P
+             WHERE P.speed >= L.speed);
+#d)
+USE it_products;
+SELECT model
+FROM (SELECT model, price
+      FROM pc
+      UNION
+      SELECT model, price
+      FROM laptop
+      UNION
+      SELECT model, price
+      FROM printer) AS M
+WHERE M.price >= ALL (SELECT price
+                      FROM pc
+                      UNION
+                      SELECT price
+                      FROM laptop
+                      UNION
+                      SELECT price
+                      FROM printer);
+#e)
+USE it_products;
+SELECT P.maker
+FROM Product P,
+     Printer P1
+WHERE P.model = P1.model
+  AND P1.price <= ALL (SELECT MIN(price) FROM Printer);
+SELECT P.maker
+FROM Product P,
+     Printer P2
+WHERE P.model = P2.model
+  AND P2.price IN (SELECT MIN(T2.price) FROM Printer T2);
+#f)
+USE it_products;
+SELECT P.maker
+FROM Product P,
+     PC P1
+WHERE P.model = P1.model
+  AND P1.ram IN (SELECT MIN(ram) FROM PC)
+  AND P1.speed >= ALL (SELECT P1.speed
+                       FROM Product R1,
+                            PC P1
+                       WHERE R1.model = p1.model
+                         AND P1.ram IN (SELECT MIN(ram) FROM PC));
+SELECT P.maker
+FROM Product P,
+     PC P1
+WHERE P.model = P1.model
+  AND P1.ram = (SELECT MIN(ram) FROM PC)
+  AND P1.speed IN (SELECT MAX(P1.speed)
+                   FROM Product R1,
+                        PC P1
+                   WHERE R1.model = p1.model
+                     AND P1.ram IN (SELECT MIN(ram) FROM PC));
+#P165，6.3.2
+#a)
+USE warships;
+SELECT C.country
+FROM classes C
+WHERE numGuns IN
+      (SELECT MAX(numGuns)
+       FROM Classes);
+SELECT C.country
+FROM classes C
+WHERE numGuns >= ALL (SELECT numGuns FROM Classes);
+#b)
+USE warships;
+SELECT DISTINCT C.class
+FROM classes C,
+     ships S
+WHERE C.class = S.class
+  AND EXISTS(SELECT ship
+             FROM outcomes O
+             WHERE O.result = 'sunk'
+               AND O.ship = s.name);
+SELECT DISTINCT C.class
+FROM classes C,
+     ships S
+WHERE C.class = S.class
+  AND S.name IN (SELECT ship
+                 FROM outcomes O
+                 WHERE O.result = 'sunk');
+#c)
+USE warships;
+SELECT S.name
+FROM ships S
+WHERE S.class IN (SELECT class FROM classes C WHERE bore = 16);
+SELECT S.name
+FROM ships S
+WHERE EXISTS(SELECT class FROM classes C WHERE bore = 16 AND C.class = S.class);
+#d)
+USE warships;
+SELECT O.battle
+FROM outcomes O
+WHERE O.ship IN (SELECT name
+                 FROM ships S
+                 WHERE S.class =
+                       'Kongo');
+SELECT O.battle
+FROM outcomes O
+WHERE EXISTS(SELECT name
+             FROM ships S
+             WHERE S.class = 'Kongo'
+               AND S.name = O.ship);
+#e)
+USE warships;
+SELECT S.name
+FROM ships S,
+     classes C
+WHERE S.Class = C.Class
+  AND numGuns >= ALL (SELECT numGuns
+                      FROM ships S1,
+                           classes C1
+                      WHERE S1.Class = C1.class
+                        AND C1.bore = C.bore);
+SELECT S.name
+FROM ships S,
+     classes C
+WHERE S.Class = C.class
+  AND numGuns IN (SELECT MAX(numGuns)
+                  FROM ships S1,
+                       classes C1
+                  WHERE S1.Class = C1.class
+                    AND C1.bore = C.bore);
+
+#P165，6.3.7
+#a)如果有n个公司和m个主管，则返回n*m元组。每个公司将出现m次；每个执行一次。
+#b)starsIn和Moviestar之间没有公共属性；因此不返回元组。
+#c)至少有一个元组对应于电影明星中的每一颗星。失业星将出现一次，starsIn的值为空。
+#  所有被雇佣的明星出现的次数将是他们工作的电影数量的倍。换句话说，对于starsIn（starName）中的每个元组，
+#  将联接并返回来自Moviestar（name））的相应元组。对于Moviestar中在starsIn中没有对应项的元组，
+#  Moviestar元组将返回starsIn列的空值。
+
+#P165，6.3.8
+USE it_products;
+SELECT P.MAKER,
+       P.MODEL,
+       P.TYPE,
+       P1.SPEED,
+       P1.RAM,
+       P1.HD,
+       0.0 AS SCREEN,
+       P1.PRICE
+FROM product P,
+     pc P1
+WHERE P.MODEL = P1.MODEL
+UNION
+SELECT P.MAKER,
+       P.MODEL,
+       P.TYPE,
+       L.SPEED,
+       L.RAM,
+       L.HD,
+       L.SCREEN,
+       L.PRICE
+FROM product P,
+     laptop L
+WHERE P.MODEL = L.MODEL;
+
+#P165，6.3.9
+USE warships;
+SELECT *
+FROM classes
+         NATURAL RIGHT OUTER JOIN ships;
+
+#P171，6.4.6
+#a)
+USE it_products;
+SELECT AVG(speed)
+FROM pc;
+#b)
+USE it_products;
+SELECT AVG(speed)
+FROM laptop
+WHERE price > 1000;
+#c)
+USE it_products;
+SELECT AVG(P1.price)
+FROM product P,
+     pc P1
+WHERE P.model = P1.model
+  AND P.maker = 'A';
+#d)
+USE it_products;
+SELECT AVG(M.price)
+FROM (SELECT P1.price
+      FROM product P,
+           pc P1
+      WHERE P.model = P1.model
+        AND P.maker = 'D'
+      UNION ALL
+      SELECT L.price
+      FROM product P,
+           laptop L
+      WHERE P.model = L.model
+        AND P.maker = 'D'
+     ) M;
+#e)
+USE it_products;
+SELECT speed, AVG(price)
+FROM pc
+GROUP BY speed;
+#f)
+USE it_products;
+SELECT P.maker, AVG(L.screen)
+FROM product P,
+     laptop L
+WHERE P.model = L.model
+GROUP BY P.maker;
+#g)
+USE it_products;
+SELECT P.maker
+FROM product P,
+     pc P1
+WHERE P.model = P1.model
+GROUP BY P.maker
+HAVING COUNT(P.model) >= 3;
+#h)
+USE it_products;
+SELECT P.maker, MAX(P1.price)
+FROM product P,
+     pc P1
+WHERE P.model = P1.model
+GROUP BY P.maker;
+#i)
+USE it_products;
+SELECT speed, AVG(price)
+FROM pc
+WHERE speed > 2.0
+GROUP BY speed;
+#j)
+USE it_products;
+SELECT AVG(P1.hd)
+FROM product P,
+     pc P1
+WHERE P.model = P1.model
+  AND P.maker IN (SELECT maker
+                  FROM product
+                  WHERE type = 'printer'
+);
+
+#P171，6.4.7
+#a)
+USE warships;
+SELECT COUNT(classes.type)
+FROM classes
+WHERE type = 'bb';
+#b)
+USE warships;
+SELECT AVG(classes.numGuns)
+FROM classes
+WHERE type = 'bb';
+#c)
+USE warships;
+SELECT AVG(C.numGuns)
+FROM classes C
+         INNER JOIN ships S
+                    ON (C.class = S.class)
+WHERE C.type = 'bb';
+#d)
+USE warships;
+SELECT C.class, MIN(S.launched)
+FROM classes C,
+     ships S
+WHERE C.class = S.class
+GROUP BY C.class;
+#e)
+USE warships;
+SELECT C.class, COUNT(O.ship)
+FROM classes C,
+     outcomes O,
+     ships S
+WHERE C.class = S.class
+  AND S.name = O.ship
+  AND O.result = 'sunk'
+GROUP BY C.class;
+#f)
+USE warships;
+SELECT M.class, COUNT(o.ship)
+FROM outcomes O,
+     ships S,
+     (
+         SELECT C.class
+         FROM classes C,
+              ships S
+         WHERE C.class = S.class
+         GROUP BY C.class
+         HAVING COUNT(S.name) >= 3) M
+WHERE O.result = 'sunk'
+  AND O.ship = S.name
+  AND S.class = M.class
+GROUP BY M.class;
+#g)
+USE warships;
+SELECT C.country, AVG(c.bore * c.bore * c.bore * 0.5)
+FROM classes C,
+     ships S
+WHERE C.class = S.class
+GROUP BY C.country;

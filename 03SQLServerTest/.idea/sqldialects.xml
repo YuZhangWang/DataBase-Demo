@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/11.14Experiment_5_1.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/11.15Experiment_6_2.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/11.16Experiment_7_1.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/11.16Experiment_7_2.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/实验4增删改约束.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/实验4视图和触发器.sql" dialect="TSQL" />
+  </component>
+</project>
