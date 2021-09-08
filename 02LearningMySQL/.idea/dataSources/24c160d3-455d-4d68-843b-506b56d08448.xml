@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="LearningMySQL">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.18">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.23">
     <root id="1">
       <ServerVersion>8.0.21</ServerVersion>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -4485,42 +4485,35 @@
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1110" parent="368" name="first_name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1111" parent="368" name="last_name">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1112" parent="368" name="job_title">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1113" parent="368" name="salary">
       <Position>5</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1114" parent="368" name="reports_to">
       <Position>6</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1115" parent="368" name="office_id">
       <Position>7</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <index id="1116" parent="368" name="fk_employees_employees_idx">
       <ColNames>reports_to</ColNames>
@@ -4550,25 +4543,21 @@
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1122" parent="369" name="address">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1123" parent="369" name="city">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1124" parent="369" name="state">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="1125" parent="369" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -4580,25 +4569,21 @@
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1127" parent="370" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1128" parent="370" name="quantity_in_stock">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1129" parent="370" name="unit_price">
       <Position>4</Position>
       <DataType>decimal(4,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="1130" parent="370" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -4609,36 +4594,30 @@
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1132" parent="371" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1133" parent="371" name="address">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1134" parent="371" name="city">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1135" parent="371" name="state">
       <Position>5</Position>
       <DataType>char(2)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1136" parent="371" name="phone">
       <Position>6</Position>
       <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="1137" parent="371" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -4649,49 +4628,41 @@
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1139" parent="372" name="number">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1140" parent="372" name="client_id">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1141" parent="372" name="invoice_total">
       <Position>4</Position>
       <DataType>decimal(9,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1142" parent="372" name="payment_total">
       <Position>5</Position>
       <DataType>decimal(9,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0.00</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1143" parent="372" name="invoice_date">
       <Position>6</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1144" parent="372" name="due_date">
       <Position>7</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1145" parent="372" name="payment_date">
       <Position>8</Position>
       <DataType>date|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <index id="1146" parent="372" name="FK_client_id">
       <ColNames>client_id</ColNames>
@@ -4713,13 +4684,11 @@
       <DataType>tinyint|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1150" parent="373" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="1151" parent="373" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -4731,37 +4700,31 @@
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1153" parent="374" name="client_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1154" parent="374" name="invoice_id">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1155" parent="374" name="date">
       <Position>4</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1156" parent="374" name="amount">
       <Position>5</Position>
       <DataType>decimal(9,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1157" parent="374" name="payment_method">
       <Position>6</Position>
       <DataType>tinyint|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <index id="1158" parent="374" name="fk_client_id_idx">
       <ColNames>client_id</ColNames>
@@ -4802,54 +4765,45 @@
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1166" parent="375" name="first_name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1167" parent="375" name="last_name">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1168" parent="375" name="birth_date">
       <Position>4</Position>
       <DataType>date|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1169" parent="375" name="phone">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1170" parent="375" name="address">
       <Position>6</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1171" parent="375" name="city">
       <Position>7</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1172" parent="375" name="state">
       <Position>8</Position>
       <DataType>char(2)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1173" parent="375" name="points">
       <Position>9</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="1174" parent="375" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -4860,25 +4814,21 @@
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1176" parent="376" name="order_Id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1177" parent="376" name="product_id">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1178" parent="376" name="note">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="1179" parent="376" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -4890,25 +4840,21 @@
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1181" parent="377" name="product_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1182" parent="377" name="quantity">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1183" parent="377" name="unit_price">
       <Position>4</Position>
       <DataType>decimal(4,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <index id="1184" parent="377" name="fk_order_items_products_idx">
       <ColNames>product_id</ColNames>
@@ -4936,13 +4882,11 @@ product_id</ColNames>
       <Position>1</Position>
       <DataType>tinyint|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1189" parent="378" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="1190" parent="378" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -4954,41 +4898,34 @@ product_id</ColNames>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1192" parent="379" name="customer_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1193" parent="379" name="order_date">
       <Position>3</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1194" parent="379" name="status">
       <Position>4</Position>
       <DataType>tinyint|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1195" parent="379" name="comments">
       <Position>5</Position>
       <DataType>varchar(2000)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1196" parent="379" name="shipped_date">
       <Position>6</Position>
       <DataType>date|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1197" parent="379" name="shipper_id">
       <Position>7</Position>
       <DataType>smallint|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <index id="1198" parent="379" name="fk_orders_customers_idx">
       <ColNames>customer_id</ColNames>
@@ -5030,25 +4967,21 @@ product_id</ColNames>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1206" parent="380" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1207" parent="380" name="quantity_in_stock">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1208" parent="380" name="unit_price">
       <Position>4</Position>
       <DataType>decimal(4,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="1209" parent="380" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -5060,13 +4993,11 @@ product_id</ColNames>
       <DataType>smallint|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1211" parent="381" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="1212" parent="381" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>

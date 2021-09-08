@@ -1,65 +1,71 @@
-/* ²éÑ¯Ö»³ö°æÊıÑ§ÀàÊé¼®¶ø²»³ö°æ¼ÆËã»úÀàÊé¼®µÄ³ö°æÉç*/
+/* ï¿½ï¿½Ñ¯Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½é¼®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é¼®ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½*/
 select distinct publish
 from Book
-where classes = 'ÊıÑ§Àà'
-except
+where classes = 'ï¿½ï¿½Ñ§ï¿½ï¿½'
+    except
 select distinct publish
 from Book
-where classes = '¼ÆËã»úÀà'
+where classes = 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½'
 
-/*¢Ë ²éÑ¯ÊéÃûÏàÍ¬µÄÃû³Æ¶Ô¡£Ã¿¶ÔÖ»ÁĞ³öÒ»´Î¡£*/
-select b1.name,b2.name
-from Book b1,Book b2
+/*ï¿½ï¿½ ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶Ô¡ï¿½Ã¿ï¿½ï¿½Ö»ï¿½Ğ³ï¿½Ò»ï¿½Î¡ï¿½*/
+select b1.name, b2.name
+from Book b1,
+     Book b2
 where b1.name = b2.name
-      and b1.num<b2.num
+  and b1.num < b2.num
 
-/*¢Ì ²éÑ¯ÔÚÖ¸¶¨Ê±¼äÄÚÆ½¾ù½èÊé×î¶àµÄËùÓĞ¶ÁÕß¡£*/
+/*ï¿½ï¿½ ï¿½ï¿½Ñ¯ï¿½ï¿½Ö¸ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Æ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½ß¡ï¿½*/
 create view reader_booknum
 as
-select id,name,count(bdate) bdatenum
-from Administrator a1,Reader r1
+select id, name, count(bdate) bdatenum
+from Administrator a1,
+     Reader r1
 where a1.reader_id = r1.id
-      and a1.bdate>'2020-06-00'
-	  and a1.bdate<'2020-09-00'
-group by id,name
+  and a1.bdate > '2020-06-00'
+  and a1.bdate < '2020-09-00'
+group by id, name
 
-select id,name
+select id, name
 from reader_booknum
-where bdatenum>= all(select bdatenum
-                     from reader_booknum)
+where bdatenum >= all (select bdatenum
+                       from reader_booknum)
 
-/*¢Í ²éÑ¯Ç¡ºÃ½èÔÄÁË3±¾Í¼ÊéµÄ¶ÁÕß¡£*/
-select id,name
-from Administrator a1,Reader r1
+/*ï¿½ï¿½ ï¿½ï¿½Ñ¯Ç¡ï¿½Ã½ï¿½ï¿½ï¿½ï¿½ï¿½3ï¿½ï¿½Í¼ï¿½ï¿½Ä¶ï¿½ï¿½ß¡ï¿½*/
+select id, name
+from Administrator a1,
+     Reader r1
 where a1.reader_id = r1.id
-group by id,name
-having count(a1.reader_id)=3
-	
+group by id, name
+having count(a1.reader_id) = 3
 
-/*¢Î ²éÑ¯ÔÚÖ¸¶¨Ê±¼äÄÚ±»½èÔÄ×î¶àµÄÊé¼®ĞÅÏ¢¡£*/
+
+/*ï¿½ï¿½ ï¿½ï¿½Ñ¯ï¿½ï¿½Ö¸ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ú±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½Ï¢ï¿½ï¿½*/
 create view books_booknum
 as
-select num,name,count(bdate) bdatenum
-from Administrator a1,book b1
+select num, name, count(bdate) bdatenum
+from Administrator a1,
+     book b1
 where a1.book_num = b1.num
-      and a1.bdate>'2020-06-00'
-	  and a1.bdate<'2020-09-00'
-group by num,name
+  and a1.bdate > '2020-06-00'
+  and a1.bdate < '2020-09-00'
+group by num, name
 
-select num,name
+select num, name
 from books_booknum
-where bdatenum>= all(select bdatenum
-                     from books_booknum)
+where bdatenum >= all (select bdatenum
+                       from books_booknum)
 
-/*¢Ï ²éÑ¯ËùÓĞÍ¼ÊéµÄISBN¡¢ÊéÃû¡¢½èÔÄ´ÎÊı£¬²¢°´½èÔÄ´ÎÊı´Ó´óµ½Ğ¡ÅÅÁĞ¡£*/
-select num,name,count(a1.book_num) time
-from book b1,Administrator a1
-where b1.num=a1.book_num
-group by num,name
+/*ï¿½ï¿½ ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ISBNï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½Ó´ï¿½Ğ¡ï¿½ï¿½ï¿½Ğ¡ï¿½*/
+select num, name, count(a1.book_num) time
+from book b1,
+     Administrator a1
+where b1.num = a1.book_num
+group by num, name
 order by time desc
 
-/*¢Ğ ²éÑ¯¶ÁÕßÒÑ½è³¬¹ı30Ìì¶øÎ´»¹µÄÍ¼ÊéÊıÁ¿¡££¨¼ÙÉè½ñÌìÎª2020-11-22£©*/
+/*ï¿½ï¿½ ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½Ñ½è³¬ï¿½ï¿½30ï¿½ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª2020-11-22ï¿½ï¿½*/
 select count(book_num) unreturnnum
 from Administrator
-where condition='N' and bdate<'2020-10-22'
+where condition = 'N'
+  and bdate < '2020-10-22'
 

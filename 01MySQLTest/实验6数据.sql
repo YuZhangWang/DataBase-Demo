@@ -1,27 +1,37 @@
 create database test
-on
-( name='test',
-  filename='E:\data\test.mdf'
-)
+    on
+    ( name ='test',
+        filename ='E:\data\test.mdf'
+        )
 
 use test
 create table YearBonus
-( [name] varchar(30),   --ÐÕÃû
-  [year] varchar(4),    --Äê·Ý
-  jobLevel varchar(10), --¹¤×÷¼¶±ð
-  basicSalary money,    --»ù±¾¹¤×Ê
-  times smallint,       --Çë¼Ù´ÎÊý
-  YearBonus money,      --ÄêÖÕ½±
-  constraint PK_YearBonus primary key(name,[year])
+(
+    [name]      varchar(30), --ï¿½ï¿½ï¿½ï¿½
+    [year]      varchar(4),  --ï¿½ï¿½ï¿½
+    jobLevel    varchar(10), --ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    basicSalary money,       --ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    times       smallint,    --ï¿½ï¿½Ù´ï¿½ï¿½ï¿½
+    YearBonus   money,       --ï¿½ï¿½ï¿½Õ½ï¿½
+    constraint PK_YearBonus primary key (name, [year])
 )
 
-insert into YearBonus values('²Üº£¾þ','2016','¿Æ¼¶',9000,20,null)
-insert into YearBonus values('²ÜÑ§³É','2016','´¦¼¶',10000,10,null)
-insert into YearBonus values('³Â¿¡','2016','¿Æ¼¶',9000,10,null)
-insert into YearBonus values('´Þºë','2016','´¦¼¶',8000,10,null)
-insert into YearBonus values('Àî¹ã','2016','¿ÆÔ±',8000,20,null)
-insert into YearBonus values('Áõ·É','2016','´¦¼¶',9000,10,null)
-insert into YearBonus values('ãÉ×ÓºÀ','2016','¹¤ÈË',5000,10,null)
-insert into YearBonus values('ËåÎä','2016','¹¤ÈË',6000,5,null)
-insert into YearBonus values('ÕÅ·«','2016','¿ÆÔ±',8000,20,null)
+insert into YearBonus
+values ('ï¿½Üºï¿½ï¿½ï¿½', '2016', 'ï¿½Æ¼ï¿½', 9000, 20, null)
+insert into YearBonus
+values ('ï¿½ï¿½Ñ§ï¿½ï¿½', '2016', 'ï¿½ï¿½ï¿½ï¿½', 10000, 10, null)
+insert into YearBonus
+values ('ï¿½Â¿ï¿½', '2016', 'ï¿½Æ¼ï¿½', 9000, 10, null)
+insert into YearBonus
+values ('ï¿½Þºï¿½', '2016', 'ï¿½ï¿½ï¿½ï¿½', 8000, 10, null)
+insert into YearBonus
+values ('ï¿½ï¿½ï¿½', '2016', 'ï¿½ï¿½Ô±', 8000, 20, null)
+insert into YearBonus
+values ('ï¿½ï¿½ï¿½ï¿½', '2016', 'ï¿½ï¿½ï¿½ï¿½', 9000, 10, null)
+insert into YearBonus
+values ('ï¿½ï¿½ï¿½Óºï¿½', '2016', 'ï¿½ï¿½ï¿½ï¿½', 5000, 10, null)
+insert into YearBonus
+values ('ï¿½ï¿½ï¿½ï¿½', '2016', 'ï¿½ï¿½ï¿½ï¿½', 6000, 5, null)
+insert into YearBonus
+values ('ï¿½Å·ï¿½', '2016', 'ï¿½ï¿½Ô±', 8000, 20, null)
 

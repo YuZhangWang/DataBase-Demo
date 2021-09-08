@@ -7,6 +7,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SQL File" />
+        <option value="SQL 文件" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="1iJn3hagFOS0xj4PwOd3EYrUlLb" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -15,12 +23,13 @@
   <component name="PropertiesComponent">
     <property name="DBE.Init.BalloonShown" value="true" />
     <property name="DatabaseDriversLRU" value="mysql&#10;sqlite&#10;sqlserver" />
+    <property name="RunOnceActivity.OpenDatabaseViewOnStart" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="database.main2" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
-  <component name="RunManager" selected="Database Script.create-databases.sql">
+  <component name="RunManager" selected="数据库脚本.console.sql">
     <configuration name="console.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$APPLICATION_CONFIG_DIR$/consoles/db/0b0727b9-d9b8-4183-b6ee-4ed2abd5f8a4/console.sql" />
       <script-mode>FILE</script-mode>
@@ -31,94 +40,6 @@
       <script-mode>FILE</script-mode>
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Database Script.create-databases.sql" />
-        <item itemvalue="Database Script.console.sql" />
-      </list>
-    </recent_temporary>
   </component>
-  <component name="WindowStateProjectService">
-    <state x="357" y="248" key="#SQL_方言" timestamp="1601634387042">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="357" y="248" key="#SQL_方言/0.0.1536.824@0.0.1536.824" timestamp="1601634387042" />
-    <state x="287" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602420951249">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="287" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1602420951249" />
-    <state x="576" y="202" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605229017052">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="576" y="202" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1605229017052" />
-    <state x="466" y="58" key="#console.sql" timestamp="1601635891440">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="466" y="58" key="#console.sql/0.0.1536.824@0.0.1536.824" timestamp="1601635891440" />
-    <state x="466" y="58" key="#create-databases.sql" timestamp="1606438261120">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="466" y="58" key="#create-databases.sql/0.0.1536.824@0.0.1536.824" timestamp="1606438261120" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1603796815771">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603796815771" />
-    <state width="1213" height="320" key="GridCell.Tab.0.bottom" timestamp="1606479669959">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1213" height="320" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606479669959" />
-    <state width="1213" height="320" key="GridCell.Tab.0.center" timestamp="1606479669959">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1213" height="320" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606479669959" />
-    <state width="1213" height="320" key="GridCell.Tab.0.left" timestamp="1606479669959">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1213" height="320" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606479669959" />
-    <state width="1213" height="320" key="GridCell.Tab.0.right" timestamp="1606479669959">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1213" height="320" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606479669959" />
-    <state width="242" height="553" key="HiddenNamespacesPopup" timestamp="1606486855978">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="242" height="553" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1606486855978" />
-    <state x="177" y="42" key="SettingsEditor" timestamp="1605229299730">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="177" y="42" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605229299730" />
-    <state x="676" y="282" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1601644603262">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="676" y="282" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.0.1536.824@0.0.1536.824" timestamp="1601644603262" />
-    <state x="674" y="287" width="329" height="267" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601718561466">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="674" y="287" width="329" height="267" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1536.824@0.0.1536.824" timestamp="1601718561466" />
-    <state x="499" y="217" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1603631779650">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="499" y="217" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.0.1536.824@0.0.1536.824" timestamp="1603631779650" />
-    <state x="464" y="236" width="352" height="421" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1603680903268">
-      <screen x="0" y="0" width="1280" height="920" />
-    </state>
-    <state x="464" y="236" width="352" height="421" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1280.920@0.0.1280.920" timestamp="1603680903268" />
-    <state x="585" y="216" width="366" height="387" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1536.824@0.0.1536.824" timestamp="1603631474775" />
-    <state x="481" y="76" key="com.intellij.database.run.actions.ShowCsvFormatsAction$ForImport" timestamp="1603631811286">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="481" y="76" key="com.intellij.database.run.actions.ShowCsvFormatsAction$ForImport/0.0.1536.824@0.0.1536.824" timestamp="1603631811286" />
-    <state x="625" y="105" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1601720222817">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="625" y="105" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1601720222817" />
-    <state x="212" y="117" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1601720215725">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="212" y="117" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/0.0.1536.824@0.0.1536.824" timestamp="1601720215725" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601726672634">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601726672634" />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
 </project>

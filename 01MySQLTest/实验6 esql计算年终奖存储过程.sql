@@ -2,50 +2,51 @@ USE [test]
 create procedure [dbo].[GetSalary]
 as
 begin
-/*ÉùÃ÷±äÁ¿*/
-declare @name nvarchar(30);
-declare @year nvarchar(4);
-declare @lever nvarchar(10);
-declare @basicsalary float;
-declare @time float;
-declare  @yearbonus float
-/*ÉùÃ÷myCursorÓÎ±ê*/
-declare myCursor cursor for
-  select name,year,jobLevel,basicSalary,times
-  from teacher;
-  /*´ò¿ªÓÎ±ê*/
-open myCursor;
-fetch next from myCursor into @name,@year,@lever,@basicsalary,@time;
- /*Êý¾Ý´¦Àí*/
- while(@@FETCH_STATUS=0)
-	begin
- /*¼ÆËãÄêÖÕ½±*/
-	if @lever='´¦¼¶'
-	begin
-	set @yearbonus=@basicsalary*12*0.15*1-(@time*50);
-	end;
-	else
-	if @lever='¿Æ¼¶'
-    begin
-    set @yearbonus=@basicsalary*12*0.15*0.8-(@time*50);
-	end;
-	else
-	if @lever='¿ÆÔ±'
-	begin
-    set @yearbonus=@basicsalary*12*0.15*0.5-(@time*50);
-	end;
-	else
-	begin
-    set @yearbonus=@basicsalary*12*0.15*0.4-(@time*50);
-	end;
-	 /*¸úÐÂÊý¾Ý¿âÊý¾Ý*/
-    update teacher 
-	set YearBonus=@yearbonus
-	where name=@name;
-	fetch next from myCursor into @name,@year,@lever,@basicsalary,@time;
-	end
- /*¹Ø±ÕÓÎ±ê*/
- close myCursor
- deallocate myCursor
- end
- select * from Teacher
+    /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
+    declare @name nvarchar(30);
+    declare @year nvarchar(4);
+    declare @lever nvarchar(10);
+    declare @basicsalary float;
+    declare @time float;
+    declare @yearbonus float
+/*ï¿½ï¿½ï¿½ï¿½myCursorï¿½Î±ï¿½*/
+    declare myCursor cursor for
+        select name, year, jobLevel, basicSalary, times
+        from teacher;
+    /*ï¿½ï¿½ï¿½Î±ï¿½*/
+    open myCursor;
+    fetch next from myCursor into @name,@year,@lever,@basicsalary,@time;
+    /*ï¿½ï¿½ï¿½Ý´ï¿½ï¿½ï¿½*/
+    while(@@FETCH_STATUS = 0)
+        begin
+            /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ½ï¿½*/
+            if @lever = 'ï¿½ï¿½ï¿½ï¿½'
+                begin
+                    set @yearbonus = @basicsalary * 12 * 0.15 * 1 - (@time * 50);
+                end;
+            else
+                if @lever = 'ï¿½Æ¼ï¿½'
+                    begin
+                        set @yearbonus = @basicsalary * 12 * 0.15 * 0.8 - (@time * 50);
+                    end;
+                else
+                    if @lever = 'ï¿½ï¿½Ô±'
+                        begin
+                            set @yearbonus = @basicsalary * 12 * 0.15 * 0.5 - (@time * 50);
+                        end;
+                    else
+                        begin
+                            set @yearbonus = @basicsalary * 12 * 0.15 * 0.4 - (@time * 50);
+                        end;
+            /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½*/
+            update teacher
+            set YearBonus=@yearbonus
+            where name = @name;
+            fetch next from myCursor into @name,@year,@lever,@basicsalary,@time;
+        end
+    /*ï¿½Ø±ï¿½ï¿½Î±ï¿½*/
+    close myCursor
+    deallocate myCursor
+end
+select *
+from Teacher

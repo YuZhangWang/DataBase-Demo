@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="MySQLTest">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.18">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.23">
     <root id="1">
       <ServerVersion>8.0.21</ServerVersion>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -1001,32 +1001,26 @@
       <Position>1</Position>
       <DataType>varchar(4)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="327" parent="291" name="speed">
       <Position>2</Position>
       <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="328" parent="291" name="ram">
       <Position>3</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="329" parent="291" name="hd">
       <Position>4</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="330" parent="291" name="screen">
       <Position>5</Position>
       <DataType>float|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="331" parent="291" name="price">
       <Position>6</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="332" parent="291" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1037,27 +1031,22 @@
       <Position>1</Position>
       <DataType>varchar(4)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="334" parent="292" name="speed">
       <Position>2</Position>
       <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="335" parent="292" name="ram">
       <Position>3</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="336" parent="292" name="hd">
       <Position>4</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="337" parent="292" name="price">
       <Position>5</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="338" parent="292" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1068,22 +1057,18 @@
       <Position>1</Position>
       <DataType>varchar(4)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="340" parent="293" name="color">
       <Position>2</Position>
       <DataType>tinyint(1)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="341" parent="293" name="type">
       <Position>3</Position>
       <DataType>varchar(7)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="342" parent="293" name="price">
       <Position>4</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="343" parent="293" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1093,18 +1078,15 @@
     <column id="344" parent="294" name="maker">
       <Position>1</Position>
       <DataType>varchar(1)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="345" parent="294" name="model">
       <Position>2</Position>
       <DataType>varchar(4)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="346" parent="294" name="type">
       <Position>3</Position>
       <DataType>varchar(7)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="347" parent="294" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1114,23 +1096,19 @@
     <column id="348" parent="295" name="name">
       <Position>1</Position>
       <DataType>varchar(20)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="349" parent="295" name="address">
       <Position>2</Position>
       <DataType>varchar(15)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="350" parent="295" name="cert">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="351" parent="295" name="netWorth">
       <Position>4</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="352" parent="295" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1141,33 +1119,27 @@
       <Position>1</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="354" parent="296" name="year">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="355" parent="296" name="length">
       <Position>3</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="356" parent="296" name="genre">
       <Position>4</Position>
       <DataType>varchar(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="357" parent="296" name="studioName">
       <Position>5</Position>
       <DataType>varchar(15)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="358" parent="296" name="producerC">
       <Position>6</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="359" parent="296" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1179,27 +1151,22 @@ year</ColNames>
       <Position>1</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="361" parent="297" name="address">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="362" parent="297" name="genre">
       <Position>3</Position>
       <DataType>varchar(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="363" parent="297" name="birthdate">
       <Position>4</Position>
       <DataType>date|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="364" parent="297" name="phone">
       <Position>5</Position>
       <DataType>varchar(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="365" parent="297" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1210,18 +1177,15 @@ year</ColNames>
       <Position>1</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="367" parent="298" name="movieYear">
       <Position>2</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="368" parent="298" name="starName">
       <Position>3</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <index id="369" parent="298" name="fk_moviestar">
       <ColNames>starName</ColNames>
@@ -1242,17 +1206,14 @@ starName</ColNames>
       <Position>1</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="373" parent="299" name="address">
       <Position>2</Position>
       <DataType>varchar(15)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="374" parent="299" name="pres">
       <Position>3</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="375" parent="299" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1306,12 +1267,10 @@ starName</ColNames>
       <Position>1</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="387" parent="302" name="date">
       <Position>2</Position>
       <DataType>varchar(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="388" parent="302" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1322,32 +1281,26 @@ starName</ColNames>
       <Position>1</Position>
       <DataType>varchar(15)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="390" parent="303" name="type">
       <Position>2</Position>
       <DataType>varchar(2)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="391" parent="303" name="country">
       <Position>3</Position>
       <DataType>varchar(12)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="392" parent="303" name="numGuns">
       <Position>4</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="393" parent="303" name="bore">
       <Position>5</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="394" parent="303" name="displacement">
       <Position>6</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="395" parent="303" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1358,17 +1311,14 @@ starName</ColNames>
       <Position>1</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="397" parent="304" name="battle">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="398" parent="304" name="result">
       <Position>3</Position>
       <DataType>varchar(8)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="399" parent="304" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1379,17 +1329,14 @@ starName</ColNames>
       <Position>1</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="401" parent="305" name="class">
       <Position>2</Position>
       <DataType>varchar(15)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="402" parent="305" name="launched">
       <Position>3</Position>
       <DataType>varchar(4)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="403" parent="305" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1400,12 +1347,10 @@ starName</ColNames>
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="405" parent="306" name="name">
       <Position>2</Position>
       <DataType>varchar(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="406" parent="306" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1416,12 +1361,10 @@ starName</ColNames>
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="408" parent="307" name="bname">
       <Position>2</Position>
       <DataType>varchar(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="409" parent="307" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1433,47 +1376,39 @@ starName</ColNames>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="411" parent="308" name="admin_login_name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="412" parent="308" name="admin_pwd">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="413" parent="308" name="admin_name">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="414" parent="308" name="admin_hobby">
       <Position>5</Position>
       <Comment>爱好</Comment>
       <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="415" parent="308" name="admin_create">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="416" parent="308" name="admin_error">
       <Position>7</Position>
       <Comment>错误次数</Comment>
       <DataType>int|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="417" parent="308" name="admin_state">
       <Position>8</Position>
       <Comment>0-正常，1-锁定</Comment>
       <DataType>int|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="418" parent="308" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1485,37 +1420,30 @@ starName</ColNames>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="420" parent="309" name="admin_login_name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="421" parent="309" name="admin_age">
       <Position>3</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="422" parent="309" name="admin_money">
       <Position>4</Position>
       <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="423" parent="309" name="admin_pwd">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="424" parent="309" name="admin_name">
       <Position>6</Position>
       <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="425" parent="309" name="admin_create">
       <Position>7</Position>
       <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="426" parent="309" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1527,32 +1455,26 @@ starName</ColNames>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="428" parent="310" name="t_bookName">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="429" parent="310" name="t_price">
       <Position>3</Position>
       <DataType>varchar(10)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="430" parent="310" name="t_publisher">
       <Position>4</Position>
       <DataType>char(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="431" parent="310" name="t_writer">
       <Position>5</Position>
       <DataType>varchar(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="432" parent="310" name="t_createTime">
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="433" parent="310" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1564,17 +1486,14 @@ starName</ColNames>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="435" parent="311" name="t_className">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="436" parent="311" name="t_subjectName">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="437" parent="311" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1586,42 +1505,34 @@ starName</ColNames>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="439" parent="312" name="exam_title">
       <Position>2</Position>
       <DataType>varchar(400)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="440" parent="312" name="exam_total">
       <Position>3</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="441" parent="312" name="exam_count">
       <Position>4</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="442" parent="312" name="exam_question_id">
       <Position>5</Position>
       <DataType>varchar(2000)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="443" parent="312" name="exam_create">
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="444" parent="312" name="exam_begin">
       <Position>7</Position>
       <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="445" parent="312" name="exam_end">
       <Position>8</Position>
       <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="446" parent="312" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1633,34 +1544,28 @@ starName</ColNames>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="448" parent="313" name="t_bookName">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="449" parent="313" name="t_price">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="450" parent="313" name="t_gradeName">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="451" parent="313" name="t_address">
       <Position>5</Position>
       <DataType>varchar(256)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="452" parent="313" name="t_createTime">
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="453" parent="313" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1672,54 +1577,44 @@ starName</ColNames>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="455" parent="314" name="question_title">
       <Position>2</Position>
       <DataType>varchar(400)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="456" parent="314" name="question_one">
       <Position>3</Position>
       <DataType>varchar(400)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="457" parent="314" name="question_two">
       <Position>4</Position>
       <DataType>varchar(400)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="458" parent="314" name="question_three">
       <Position>5</Position>
       <DataType>varchar(400)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="459" parent="314" name="question_four">
       <Position>6</Position>
       <DataType>varchar(400)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="460" parent="314" name="question_answer">
       <Position>7</Position>
       <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="461" parent="314" name="question_diff">
       <Position>8</Position>
       <Comment>难度</Comment>
       <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="462" parent="314" name="question_chapter">
       <Position>9</Position>
       <Comment>所在章节</Comment>
       <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="463" parent="314" name="question_create">
       <Position>10</Position>
       <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="464" parent="314" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1731,32 +1626,26 @@ starName</ColNames>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="466" parent="315" name="score_stu_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="467" parent="315" name="score_exam_id">
       <Position>3</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="468" parent="315" name="score_cent">
       <Position>4</Position>
       <DataType>float|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="469" parent="315" name="score_create">
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="470" parent="315" name="score_is_next">
       <Position>6</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="471" parent="315" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1768,37 +1657,30 @@ starName</ColNames>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="473" parent="316" name="stu_login_name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="474" parent="316" name="stu_pwd">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="475" parent="316" name="stu_name">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="476" parent="316" name="stu_create">
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="477" parent="316" name="stu_error">
       <Position>6</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="478" parent="316" name="stu_state">
       <Position>7</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="479" parent="316" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1808,106 +1690,86 @@ starName</ColNames>
     <column id="480" parent="317" name="t_stuNo">
       <Position>1</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="481" parent="317" name="t_stuName">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="482" parent="317" name="t_age">
       <Position>3</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="483" parent="317" name="t_sex">
       <Position>4</Position>
       <DataType>char(2)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="484" parent="317" name="t_birthday">
       <Position>5</Position>
       <DataType>date|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="485" parent="317" name="t_phone">
       <Position>6</Position>
       <DataType>char(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="486" parent="317" name="t_score">
       <Position>7</Position>
       <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="487" parent="318" name="t_stuNo">
       <Position>1</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="488" parent="318" name="t_stuName">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="489" parent="318" name="t_age">
       <Position>3</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="490" parent="318" name="t_sex">
       <Position>4</Position>
       <DataType>char(2)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="491" parent="318" name="t_birthday">
       <Position>5</Position>
       <DataType>date|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="492" parent="318" name="t_salary">
       <Position>6</Position>
       <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="493" parent="318" name="t_award">
       <Position>7</Position>
       <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="494" parent="319" name="t_stuNo">
       <Position>1</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="495" parent="319" name="t_stuName">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="496" parent="320" name="t_stuNo">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="497" parent="320" name="t_stuName">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="498" parent="321" name="t_stuNo">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="499" parent="321" name="t_stuName">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <index id="500" parent="321" name="t_stuNo">
       <ColNames>t_stuNo</ColNames>
@@ -1922,13 +1784,11 @@ starName</ColNames>
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="503" parent="322" name="t_stuName">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="504" parent="322" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1940,13 +1800,11 @@ starName</ColNames>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="506" parent="323" name="t_stuName">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="507" parent="323" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1958,32 +1816,26 @@ starName</ColNames>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="509" parent="324" name="t_stuName">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="510" parent="324" name="t_phone">
       <Position>3</Position>
       <DataType>char(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="511" parent="324" name="t_gradeName">
       <Position>4</Position>
       <DataType>varchar(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="512" parent="324" name="t_address">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="513" parent="324" name="t_createTime">
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="514" parent="324" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -1995,23 +1847,19 @@ starName</ColNames>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="516" parent="325" name="t_classId">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="517" parent="325" name="t_name">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="518" parent="325" name="t_age">
       <Position>4</Position>
       <DataType>int|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <index id="519" parent="325" name="t_classId">
       <ColNames>t_classId</ColNames>

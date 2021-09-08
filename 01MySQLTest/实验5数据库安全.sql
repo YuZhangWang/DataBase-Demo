@@ -12,36 +12,32 @@ exec sp_adduser 'YANGLAN'
 
 
 grant select
-on  s
-to PINXU
+    on s
+    to PINXU
 grant select
-on sc
-to PINXU
+    on sc
+    to PINXU
 
 
-grant insert,delete
-on s
-to LIYONG
-grant insert,delete
-on sc
-to LIYONG
+grant insert, delete
+    on s
+    to LIYONG
+grant insert, delete
+    on sc
+    to LIYONG
 
-grant select,update(birthday)
-on s
-to LIYONG
+grant select, update (birthday)
+    on s
+    to LIYONG
 
-grant select,insert,update,delete
-on s
-to ZHOPING
-with grant option
-grant select,insert,update,delete
-on sc
-to ZHOPING
-with grant option
-
-
-
-exec sp_dropuser 'LIUXING'
+grant select, insert, update, delete
+    on s
+    to ZHOPING
+    with grant option
+grant select, insert, update, delete
+    on sc
+    to ZHOPING
+    with grant option exec sp_dropuser 'LIUXING'
 exec sp_droplogin 'LIUXING'
 
 exec sp_dropuser 'PINXU'
