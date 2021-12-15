@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c723fb8c-5912-4767-9f16-9feb0b4ded19" name="默认更改列表" comment="" />
+    <list default="true" id="c723fb8c-5912-4767-9f16-9feb0b4ded19" name="默认更改列表" comment="默认更改列表">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a2b5211c-31ea-4613-816c-84c4afd3ef6b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a2b5211c-31ea-4613-816c-84c4afd3ef6b.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/#ib_16384_0.dblwr" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#ib_16384_0.dblwr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/#innodb_temp/temp_1.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#innodb_temp/temp_1.ibt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/#innodb_temp/temp_10.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#innodb_temp/temp_10.ibt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/#innodb_temp/temp_2.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#innodb_temp/temp_2.ibt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/#innodb_temp/temp_3.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#innodb_temp/temp_3.ibt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/#innodb_temp/temp_4.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#innodb_temp/temp_4.ibt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/#innodb_temp/temp_5.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#innodb_temp/temp_5.ibt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/#innodb_temp/temp_6.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#innodb_temp/temp_6.ibt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/#innodb_temp/temp_7.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#innodb_temp/temp_7.ibt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/#innodb_temp/temp_8.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#innodb_temp/temp_8.ibt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/#innodb_temp/temp_9.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#innodb_temp/temp_9.ibt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/DESKTOP-7S5VJR1-bin.000440" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/DESKTOP-7S5VJR1-bin.000451" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/DESKTOP-7S5VJR1-bin.000451" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/DESKTOP-7S5VJR1-bin.index" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/DESKTOP-7S5VJR1-bin.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/DESKTOP-7S5VJR1-slow.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/DESKTOP-7S5VJR1-slow.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/DESKTOP-7S5VJR1.err" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/DESKTOP-7S5VJR1.err" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/YuZhangWang的MechrevoX6Ti.pid" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/YuZhangWang的MechrevoX6Ti.pid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/ib_buffer_pool" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/ib_logfile0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/ib_logfile1" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/ib_logfile1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/ibdata1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/ibtmp1" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/ibtmp1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/mysql.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/mysql.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/undo_001" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/undo_001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Data/undo_002" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/undo_002" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +42,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1iJn3hagFOS0xj4PwOd3EYrUlLb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -27,7 +58,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="advanced.settings" />
   </component>
   <component name="RunManager" selected="数据库脚本.console.sql">
     <configuration name="console.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
