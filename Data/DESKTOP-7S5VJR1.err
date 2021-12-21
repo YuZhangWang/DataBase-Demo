@@ -4595,3 +4595,111 @@
 2021-12-17T02:16:57.077184Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
 2021-12-17T02:16:57.079316Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
 2021-12-17T02:16:57.259444Z 0 [System] [MY-010931] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: ready for connections. Version: '8.0.21'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2021-12-18T22:04:09.072282Z 0 [Warning] [MY-010915] [Server] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2021-12-18T22:04:09.074827Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.21) starting as process 6164
+2021-12-18T22:04:09.289381Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2021-12-18T22:04:12.184446Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2021-12-18T22:04:13.521015Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2021-12-18T22:04:13.775428Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+2021-12-18T22:04:13.784604Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+2021-12-18T22:04:14.273734Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2021-12-18T22:04:14.275343Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2021-12-18T22:04:14.476693Z 0 [System] [MY-010931] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: ready for connections. Version: '8.0.21'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2021-12-18T22:29:28.129855Z 0 [Warning] [MY-010915] [Server] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2021-12-18T22:29:28.132473Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.21) starting as process 6136
+2021-12-18T22:29:28.304359Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2021-12-18T22:29:31.527310Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2021-12-18T22:29:32.512667Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2021-12-18T22:29:32.966500Z 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+2021-12-18T22:29:32.976446Z 0 [System] [MY-010232] [Server] XA crash recovery finished.
+2021-12-18T22:29:33.080741Z 0 [Warning] [MY-010015] [Repl] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.
+2021-12-18T22:29:33.403204Z 0 [Warning] [MY-010015] [Repl] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.
+2021-12-18T22:29:33.548336Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2021-12-18T22:29:33.549814Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2021-12-18T22:29:33.616529Z 0 [Warning] [MY-010441] [Server] Failed to open optimizer cost constant tables
+2021-12-18T22:29:33.619009Z 0 [ERROR] [MY-013129] [Server] A message intended for a client cannot be sent there as no client-session is attached. Therefore, we're sending the information to the error-log instead: MY-001146 - Table 'mysql.component' doesn't exist
+2021-12-18T22:29:33.621913Z 0 [Warning] [MY-013129] [Server] A message intended for a client cannot be sent there as no client-session is attached. Therefore, we're sending the information to the error-log instead: MY-003543 - The mysql.component table is missing or has an incorrect definition.
+2021-12-18T22:29:33.640767Z 0 [ERROR] [MY-010326] [Server] Fatal error: Can't open and lock privilege tables: Table 'mysql.db' doesn't exist
+2021-12-18T22:29:33.649881Z 0 [ERROR] [MY-010952] [Server] The privilege system failed to initialize correctly. For complete instructions on how to upgrade MySQL to a new version please see the 'Upgrading MySQL' section from the MySQL manual.
+2021-12-18T22:29:33.656388Z 0 [ERROR] [MY-010119] [Server] Aborting
+2021-12-18T22:29:35.208104Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.21)  MySQL Community Server - GPL.
+2021-12-19T02:57:12.013112Z 0 [Warning] [MY-010915] [Server] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2021-12-19T02:57:12.015931Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.21) starting as process 6124
+2021-12-19T02:57:12.267792Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2021-12-19T02:57:14.735635Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2021-12-19T02:57:15.748743Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2021-12-19T02:57:16.224825Z 0 [Warning] [MY-010015] [Repl] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.
+2021-12-19T02:57:16.457617Z 0 [Warning] [MY-010015] [Repl] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.
+2021-12-19T02:57:16.563724Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2021-12-19T02:57:16.564639Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2021-12-19T02:57:16.613330Z 0 [Warning] [MY-010441] [Server] Failed to open optimizer cost constant tables
+2021-12-19T02:57:16.614621Z 0 [ERROR] [MY-013129] [Server] A message intended for a client cannot be sent there as no client-session is attached. Therefore, we're sending the information to the error-log instead: MY-001146 - Table 'mysql.component' doesn't exist
+2021-12-19T02:57:16.616560Z 0 [Warning] [MY-013129] [Server] A message intended for a client cannot be sent there as no client-session is attached. Therefore, we're sending the information to the error-log instead: MY-003543 - The mysql.component table is missing or has an incorrect definition.
+2021-12-19T02:57:16.632625Z 0 [ERROR] [MY-010326] [Server] Fatal error: Can't open and lock privilege tables: Table 'mysql.db' doesn't exist
+2021-12-19T02:57:16.633851Z 0 [ERROR] [MY-010952] [Server] The privilege system failed to initialize correctly. For complete instructions on how to upgrade MySQL to a new version please see the 'Upgrading MySQL' section from the MySQL manual.
+2021-12-19T02:57:16.635922Z 0 [ERROR] [MY-010119] [Server] Aborting
+2021-12-19T02:57:18.156919Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.21)  MySQL Community Server - GPL.
+2021-12-19T03:11:08.876681Z 0 [Warning] [MY-010915] [Server] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2021-12-19T03:11:08.878891Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.21) starting as process 6184
+2021-12-19T03:11:09.087735Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2021-12-19T03:11:11.756647Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2021-12-19T03:11:12.659515Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2021-12-19T03:11:13.155886Z 0 [Warning] [MY-010015] [Repl] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.
+2021-12-19T03:11:13.409830Z 0 [Warning] [MY-010015] [Repl] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.
+2021-12-19T03:11:13.515632Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2021-12-19T03:11:13.516587Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2021-12-19T03:11:13.563930Z 0 [Warning] [MY-010441] [Server] Failed to open optimizer cost constant tables
+2021-12-19T03:11:13.565251Z 0 [ERROR] [MY-013129] [Server] A message intended for a client cannot be sent there as no client-session is attached. Therefore, we're sending the information to the error-log instead: MY-001146 - Table 'mysql.component' doesn't exist
+2021-12-19T03:11:13.567039Z 0 [Warning] [MY-013129] [Server] A message intended for a client cannot be sent there as no client-session is attached. Therefore, we're sending the information to the error-log instead: MY-003543 - The mysql.component table is missing or has an incorrect definition.
+2021-12-19T03:11:13.580903Z 0 [ERROR] [MY-010326] [Server] Fatal error: Can't open and lock privilege tables: Table 'mysql.db' doesn't exist
+2021-12-19T03:11:13.582241Z 0 [ERROR] [MY-010952] [Server] The privilege system failed to initialize correctly. For complete instructions on how to upgrade MySQL to a new version please see the 'Upgrading MySQL' section from the MySQL manual.
+2021-12-19T03:11:13.585201Z 0 [ERROR] [MY-010119] [Server] Aborting
+2021-12-19T03:11:15.194414Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.21)  MySQL Community Server - GPL.
+2021-12-19T11:15:09.758321Z 0 [Warning] [MY-010915] [Server] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2021-12-19T11:15:09.760941Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.21) starting as process 6000
+2021-12-19T11:15:09.964429Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2021-12-19T11:15:12.979547Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2021-12-19T11:15:14.042517Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2021-12-19T11:15:14.498752Z 0 [Warning] [MY-010015] [Repl] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.
+2021-12-19T11:15:14.741356Z 0 [Warning] [MY-010015] [Repl] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.
+2021-12-19T11:15:14.847187Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2021-12-19T11:15:14.848188Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2021-12-19T11:15:14.885768Z 0 [Warning] [MY-010441] [Server] Failed to open optimizer cost constant tables
+2021-12-19T11:15:14.888050Z 0 [ERROR] [MY-013129] [Server] A message intended for a client cannot be sent there as no client-session is attached. Therefore, we're sending the information to the error-log instead: MY-001146 - Table 'mysql.component' doesn't exist
+2021-12-19T11:15:14.890842Z 0 [Warning] [MY-013129] [Server] A message intended for a client cannot be sent there as no client-session is attached. Therefore, we're sending the information to the error-log instead: MY-003543 - The mysql.component table is missing or has an incorrect definition.
+2021-12-19T11:15:14.905367Z 0 [ERROR] [MY-010326] [Server] Fatal error: Can't open and lock privilege tables: Table 'mysql.db' doesn't exist
+2021-12-19T11:15:14.907369Z 0 [ERROR] [MY-010952] [Server] The privilege system failed to initialize correctly. For complete instructions on how to upgrade MySQL to a new version please see the 'Upgrading MySQL' section from the MySQL manual.
+2021-12-19T11:15:14.910558Z 0 [ERROR] [MY-010119] [Server] Aborting
+2021-12-19T11:15:16.670066Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.21)  MySQL Community Server - GPL.
+2021-12-21T09:10:14.253487Z 0 [Warning] [MY-010915] [Server] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2021-12-21T09:10:14.256757Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.21) starting as process 6356
+2021-12-21T09:10:14.516208Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2021-12-21T09:10:17.781448Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2021-12-21T09:10:19.012155Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2021-12-21T09:10:19.317848Z 0 [Warning] [MY-010015] [Repl] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.
+2021-12-21T09:10:19.594789Z 0 [Warning] [MY-010015] [Repl] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.
+2021-12-21T09:10:19.699477Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2021-12-21T09:10:19.700852Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2021-12-21T09:10:19.760287Z 0 [Warning] [MY-010441] [Server] Failed to open optimizer cost constant tables
+2021-12-21T09:10:19.762350Z 0 [ERROR] [MY-013129] [Server] A message intended for a client cannot be sent there as no client-session is attached. Therefore, we're sending the information to the error-log instead: MY-001146 - Table 'mysql.component' doesn't exist
+2021-12-21T09:10:19.765161Z 0 [Warning] [MY-013129] [Server] A message intended for a client cannot be sent there as no client-session is attached. Therefore, we're sending the information to the error-log instead: MY-003543 - The mysql.component table is missing or has an incorrect definition.
+2021-12-21T09:10:19.775010Z 0 [ERROR] [MY-010326] [Server] Fatal error: Can't open and lock privilege tables: Table 'mysql.db' doesn't exist
+2021-12-21T09:10:19.777392Z 0 [ERROR] [MY-010952] [Server] The privilege system failed to initialize correctly. For complete instructions on how to upgrade MySQL to a new version please see the 'Upgrading MySQL' section from the MySQL manual.
+2021-12-21T09:10:19.780803Z 0 [ERROR] [MY-010119] [Server] Aborting
+2021-12-21T09:10:21.292720Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.21)  MySQL Community Server - GPL.
+2021-12-21T09:29:46.892529Z 0 [Warning] [MY-010915] [Server] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2021-12-21T09:29:46.895639Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.21) starting as process 6320
+2021-12-21T09:29:47.097807Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2021-12-21T09:29:50.415706Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2021-12-21T09:29:51.683360Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060
+2021-12-21T09:29:52.257940Z 0 [Warning] [MY-010015] [Repl] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.
+2021-12-21T09:29:52.717513Z 0 [Warning] [MY-010015] [Repl] Gtid table is not ready to be used. Table 'mysql.gtid_executed' cannot be opened.
+2021-12-21T09:29:52.860871Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2021-12-21T09:29:52.862845Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2021-12-21T09:29:52.897588Z 0 [Warning] [MY-010441] [Server] Failed to open optimizer cost constant tables
+2021-12-21T09:29:52.899683Z 0 [ERROR] [MY-013129] [Server] A message intended for a client cannot be sent there as no client-session is attached. Therefore, we're sending the information to the error-log instead: MY-001146 - Table 'mysql.component' doesn't exist
+2021-12-21T09:29:52.902518Z 0 [Warning] [MY-013129] [Server] A message intended for a client cannot be sent there as no client-session is attached. Therefore, we're sending the information to the error-log instead: MY-003543 - The mysql.component table is missing or has an incorrect definition.
+2021-12-21T09:29:52.928772Z 0 [ERROR] [MY-010326] [Server] Fatal error: Can't open and lock privilege tables: Table 'mysql.db' doesn't exist
+2021-12-21T09:29:52.931270Z 0 [ERROR] [MY-010952] [Server] The privilege system failed to initialize correctly. For complete instructions on how to upgrade MySQL to a new version please see the 'Upgrading MySQL' section from the MySQL manual.
+2021-12-21T09:29:52.940837Z 0 [ERROR] [MY-010119] [Server] Aborting
+2021-12-21T09:29:54.643371Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.21)  MySQL Community Server - GPL.
