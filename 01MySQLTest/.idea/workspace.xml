@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c723fb8c-5912-4767-9f16-9feb0b4ded19" name="默认更改列表" comment="默认更改列表">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a2b5211c-31ea-4613-816c-84c4afd3ef6b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a2b5211c-31ea-4613-816c-84c4afd3ef6b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/#innodb_temp/temp_1.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#innodb_temp/temp_1.ibt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/#innodb_temp/temp_10.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#innodb_temp/temp_10.ibt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/#innodb_temp/temp_2.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#innodb_temp/temp_2.ibt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/#innodb_temp/temp_3.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#innodb_temp/temp_3.ibt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/#innodb_temp/temp_4.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#innodb_temp/temp_4.ibt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/#innodb_temp/temp_5.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#innodb_temp/temp_5.ibt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/#innodb_temp/temp_6.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#innodb_temp/temp_6.ibt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/#innodb_temp/temp_7.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#innodb_temp/temp_7.ibt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/#innodb_temp/temp_8.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#innodb_temp/temp_8.ibt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/#innodb_temp/temp_9.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/#innodb_temp/temp_9.ibt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/YUZHANGWANGR900-bin.000004" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/YUZHANGWANGR900-bin.000004" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/YUZHANGWANGR900-bin.index" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/YUZHANGWANGR900-bin.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/YUZHANGWANGR900-slow.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/YUZHANGWANGR900-slow.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/YUZHANGWANGR900.err" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/YUZHANGWANGR900.err" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/YuZhangWangR9000P.pid" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/YuZhangWangR9000P.pid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/ib_logfile0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/ibdata1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/ibtmp1" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/ibtmp1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/mysql.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/mysql.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/undo_001" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/undo_001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/undo_002" beforeDir="false" afterPath="$PROJECT_DIR$/../Data/undo_002" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a2b5211c-31ea-4613-816c-84c4afd3ef6b.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,15 +26,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DBE.Init.BalloonShown" value="true" />
-    <property name="DatabaseDriversLRU" value="sqlite&#10;sqlserver&#10;mysql" />
-    <property name="RunOnceActivity.OpenDatabaseViewOnStart" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/YuZhangWang"
+  }
+}]]></component>
   <component name="RunManager" selected="数据库脚本.console.sql">
     <configuration name="console.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$APPLICATION_CONFIG_DIR$/consoles/db/0b0727b9-d9b8-4183-b6ee-4ed2abd5f8a4/console.sql" />
